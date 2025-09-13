@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+  Responsive Web Design Project
+  Learn HTML Forms by Building a Registration Form
+  ------------------------------------------------
+-->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    form {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    label {
+      display: block;
+      margin: 0.5rem 0 0.25rem;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="radio"], input[type="checkbox"] {
+      width: auto;
+      margin-right: 0.5rem;
+    }
+    input[type="submit"] {
+      background: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <form method="post" action="https://register-demo.freecodecamp.org">
+    <h1>Registration Form</h1>
+    <p>Complete the form to register with us.</p>
+
+    <!-- First & Last Name -->
+    <label for="first-name">First Name</label>
+    <input id="first-name" name="first-name" type="text" required>
+
+    <label for="last-name">Last Name</label>
+    <input id="last-name" name="last-name" type="text" required>
+
+    <!-- Email -->
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" required>
+
+    <!-- Password -->
+    <label for="new-password">New Password</label>
+    <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required>
+
+    <!-- Account Type -->
+    <label>Account Type</label>
+    <label><input type="radio" name="account-type" value="personal" checked> Personal</label>
+    <label><input type="radio" name="account-type" value="business"> Business</label>
+
+    <!-- Profile Picture -->
+    <label for="profile-picture">Upload a profile picture</label>
+    <input id="profile-picture" type="file" name="file">
+
+    <!-- Age -->
+    <label for="age">Age</label>
+    <input id="age" type="number" name="age" min="13" max="120">
+
+    <!-- Referral -->
+    <label for="referrer">How did you hear about us?</label>
+    <select id="referrer" name="referrer">
+      <option value="">(select one)</option>
+      <option value="friend">Friend</option>
+      <option value="search">Search Engine</option>
+      <option value="ad">Advertisement</option>
+      <option value="other">Other</option>
+    </select>
+
+    <!-- Bio -->
+    <label for="bio">Provide a bio</label>
+    <textarea id="bio" name="bio" rows="3" placeholder="Tell us something about yourself..."></textarea>
+
+    <!-- Terms -->
+    <label>
+      <input type="checkbox" name="terms" required> I accept the <a href="#">terms and conditions</a>
+    </label>
+
+    <!-- Submit -->
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
