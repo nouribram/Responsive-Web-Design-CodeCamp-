@@ -1,1 +1,1 @@
-# Responsive-Web-Design-CodeCam
+# Responsive-Web-Design-CodeCamp
