@@ -1,4 +1,4 @@
-.canvas {
+/*.canvas {
   width: 500px;
   height: 600px;
   background-color: #fff;
@@ -22,7 +22,7 @@
   border: 5px solid black;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
-
+*/
 .one {
   background-color: #c94a4a;   /* dark red */
 }
